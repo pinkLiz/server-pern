@@ -1,0 +1,21 @@
+{
+  "name": "server-pern",
+  "version": "1.0.0",
+  "description": "Este es un proyecto para enteder el manejo de mern stack",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "node --loader ts-node/esm --no-warnings src/index.ts",
+    "serve": "nodemon --watch 'src/**/*.ts' --exec 'node --loader ts-node/esm' src/index.ts",
+    "build": "tsc"
+  },
+  "author": "Lizbeth Chavarria",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^5.0.3",
+    "express": "^5.1.0",
+    "nodemon": "^3.1.10",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
+}
