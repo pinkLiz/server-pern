@@ -4,6 +4,8 @@ import { handleInputErrors } from './middleware';
 import { body } from 'express-validator';
 import {post} from './middleware/post'
 import {put} from './middleware/put'
+import {eliminar} from './middleware/delete'
+
 
 
 const router = Router();
@@ -24,7 +26,7 @@ router.put('/:id',put,updateProduct, handleInputErrors, (req, res) => {
   res.send('Hola desde PUT');
 });
 
-router.delete('/:id',deleteProduct,handleInputErrors, (req, res) => {
+router.delete('/:id',eliminar,deleteProduct,handleInputErrors, (req, res) => {
   res.send('Hola desde DELETE');
 });
 
