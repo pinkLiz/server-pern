@@ -9,6 +9,9 @@ export const createProduct = async (req: Request, res: Response) => {
   res.json({ data: product });
 };
 
+
+
+
 export const getProducts = async (req: Request, res: Response) =>{
   const product = await Product.findAll();
   
