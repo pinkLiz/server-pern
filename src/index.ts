@@ -1,7 +1,7 @@
-import server  from "./server.js";
+import server  from "./server";
 
-server.listen(4000, ()=> {
-    console.log('Mi puerto esta escuchando');
-    
+const port = process.env.PORT || 4000
+
+server.listen(port, ()=> {
+    console.log(`Escuchando desde el puertp: ${port}`);
 })
-

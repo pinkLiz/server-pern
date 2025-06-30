@@ -1,19 +1,34 @@
 import express from "express";
 
-import router from "./router.js"
+import router from "./router"
+import db from "./config/db"
 
-const server = express();
+import colors from "colors";
 
-server.use('/', router);
+import {methods} from "./middleware/methods"
 
-// server.get('/',(req, res)=>{
-//     res.send("Hola, ya casi pasas el parcial")
-// })
+async function connectionDB() {
+    try{
+        await db.authenticate()
+        db.sync();
+        console.log(colors.cyan.bold("Conexion exitosa"));
+    }catch (error){
+        console.log(error);
+        console.log(colors.white.bgRed.bold("Hubo un erro al conectar"));
+    
+    }
+    
+}
 
-// server.post('/',(req, res)=>{
-//     res.send("Hola desde post")
-// })
+connectionDB();
 
+//instancia del servidor
+const server = express()
+//Leer datos de formularios
+server.use(express.json())
 
+server.use(methods);
+
+server.use('/',router)
 
 export default server

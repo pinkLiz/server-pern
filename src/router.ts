@@ -1,20 +1,30 @@
 import { Router  } from 'express';
+import {createProduct, getProductId, getProducts, updateProduct, deleteProduct} from './handlers/product'
+import { handleInputErrors } from './middleware';
+import { body } from 'express-validator';
+import {post} from './middleware/post'
+import {put} from './middleware/put'
+
 
 const router = Router();
 
-router.get('/', (req, res) => {
+
+router.get('/',getProducts,handleInputErrors, (req, res) => {
   res.send('Hola desde GET');
 });
 
-router.post('/', (req, res) => {
-  res.send('Hola desde POST');
+router.get('/:id',getProductId,handleInputErrors, (req, res) => {
+  res.send('Hola desde GET');
 });
 
-router.put('/', (req, res) => {
+
+router.post('/',post,handleInputErrors, createProduct);
+
+router.put('/:id',put,updateProduct, handleInputErrors, (req, res) => {
   res.send('Hola desde PUT');
 });
 
-router.delete('/', (req, res) => {
+router.delete('/:id',deleteProduct,handleInputErrors, (req, res) => {
   res.send('Hola desde DELETE');
 });
 

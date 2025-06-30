@@ -1,17 +1,18 @@
 {
   "compilerOptions": {
-    "module": "ESNext", //El modulo ah usar (ECMAScript), permite importar y exportar
+    "lib": ["esnext"],
+    "target": "ESNext", //Define la version de js
+    "module": "commonjs", //El modulo ah usar (ECMAScript), permite importar y exportar
     "moduleResolution": "node", //Indica el compilador a usar 
-    "strict": true, //Activa verificaciones estritas del compilador y encontrar los errores
+    "strict": false, //Activa verificaciones estritas del compilador y encontrar los errores
     "esModuleInterop": true, //Permite importar modulos CommonJS
     "declaration": true, //Genera archivos .d.ts
-    "target": "ES2020", //Define la version de js
     "outDir": "./dist", //Carpeta donde se guarda el codigo js generado
-    "rootDir": "./src",  //Carpeta raiz
-    "paths": {
-      "*": ["./src/*"] //Ruta que permite hacer importaciones
-    }
+    "rootDir": "./src",  //Carpeta raiz 
+    "sourceMap": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
   },
-  "include": ["src/**/*"], //Especifica los archivos y carpetas a incluir para la compilacion
+  "include": ["src/**/*.ts"], //Especifica los archivos y carpetas a incluir para la compilacion
   "exclude": ["node_modules"] //Especifica los archivos y carpetas a excluir para la compilacion
 }
