@@ -29,6 +29,6 @@ server.use(express.json())
 
 server.use(methods);
 
-server.use('/api',router)
+server.use('/api/products',router)
 
 export default server
