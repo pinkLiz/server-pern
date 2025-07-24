@@ -13,8 +13,8 @@ async function connectionDB() {
         db.sync();
         console.log(colors.cyan.bold("Conexion exitosa"));
     }catch (error){
-        console.log(error);
-        console.log(colors.white.bgRed.bold("Hubo un erro al conectar"));
+        // console.log(error);
+        // console.log(colors.white.bgRed.bold("Hubo un erro al conectar"));
     
     }
     

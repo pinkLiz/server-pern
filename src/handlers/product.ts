@@ -9,7 +9,7 @@ export const createProduct = async (req: Request, res: Response) => {
     const product = await Product.create(req.body);
     res.status(201).json({ data: product });
   } catch (error) {
-    console.log(error);
+    // console.log(error);
   }
 };
 
@@ -20,7 +20,7 @@ export const getProducts = async (req: Request, res: Response) => {
     });
     res.json({ data: product });
   } catch (error) {
-    console.log(error);
+    // console.log(error);
   }
 };
 
@@ -35,7 +35,7 @@ export const getProductId = async (req: Request, res: Response) => {
 
     res.json({ data: product });
   } catch (error) {
-    console.log(error);
+    // console.log(error);
   }
 };
 
@@ -68,7 +68,7 @@ export const updateAvailability = async (req: Request, res: Response) => {
 
     res.json({ data: product });
   } catch (error) {
-    console.log(error);
+    // console.log(error);
   }
 };
 
