@@ -8,8 +8,8 @@
     "serve": "nodemon --watch 'src/**/*.ts' --exec 'node --loader ts-node/esm' src/index.ts",
     "build": "tsc",
     "test": "jest --detectOpenHandles",
-    "test:coverage" : "npm run pretest && jest --detectOpenHandles --coverage",
-    "pretest" : "ts-node ./src/data --clear"
+    "test:coverage": "npm run pretest && jest --detectOpenHandles --coverage",
+    "pretest": "ts-node ./src/data --clear"
   },
   "author": "Lizbeth Chavarria",
   "license": "ISC",

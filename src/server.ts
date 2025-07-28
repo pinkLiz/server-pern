@@ -7,14 +7,14 @@ import colors from "colors";
 
 import {methods} from "./middleware/methods"
 
-async function connectionDB() {
+export async function connectionDB() {
     try{
         await db.authenticate()
         db.sync();
         console.log(colors.cyan.bold("Conexion exitosa"));
     }catch (error){
-        // console.log(error);
-        // console.log(colors.white.bgRed.bold("Hubo un erro al conectar"));
+        console.log(error);
+        console.log(colors.white.bgRed.bold("Hubo un error al conectar"));
     
     }
     

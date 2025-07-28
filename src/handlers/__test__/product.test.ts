@@ -1,6 +1,9 @@
 import request from 'supertest';
 import server from '../../server';
 import db from '../../config/db';
+import Product from '../../models/Product.mo';
+
+import { createProduct, getProducts, getProductId } from '../product';
 
 afterAll(async () => {
   await db.close(); 
@@ -215,3 +218,35 @@ describe('DELETE /api/products/:id', () => {
     expect(res.body.message).toBeDefined();
   });
 });
+
+
+describe('error products',()=>{
+  it('should error create product ', async () =>{
+    jest.spyOn(Product,'create')
+    .mockRejectedValueOnce(new Error("Hubo un error al crear producto"))
+
+    //Guardamos el resultado de la consola
+    const consoleSpy = jest.spyOn(console,'log')
+    await createProduct(Request, Response)
+
+    expect(consoleSpy).toHaveBeenCalledWith(
+      expect.stringContaining("Hubo un error al crear producto")
+    )
+
+  })
+})
+
+describe('error products',()=>{
+  it('should error get product ', async () =>{
+    jest.spyOn(Product,'findAll')
+    .mockRejectedValueOnce(new Error("Hubo un error al obtener producto"))
+
+    //Guardamos el resultado de la consola
+    const consoleSpy = jest.spyOn(console,'log')
+    await getProducts(Request, Response)
+
+    expect(consoleSpy).toHaveBeenCalledWith(
+      expect.stringContaining("Hubo un error al obtener producto")
+    )
+  })
+})
