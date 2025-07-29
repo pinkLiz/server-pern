@@ -3,7 +3,7 @@ import server from '../../server';
 import db from '../../config/db';
 import Product from '../../models/Product.mo';
 
-import { createProduct, getProducts, getProductId } from '../product';
+import { createProduct, getProducts, getProductId,updateAvailability } from '../product';
 
 afterAll(async () => {
   await db.close(); 
@@ -234,10 +234,10 @@ describe('error products',()=>{
     )
 
   })
-})
+});
 
 describe('error products',()=>{
-  it('should error get product ', async () =>{
+  it('should error get products ', async () =>{
     jest.spyOn(Product,'findAll')
     .mockRejectedValueOnce(new Error("Hubo un error al obtener producto"))
 
@@ -249,4 +249,34 @@ describe('error products',()=>{
       expect.stringContaining("Hubo un error al obtener producto")
     )
   })
-})
+});
+
+describe('error products',()=>{
+  it('should error get products with id ', async () =>{
+    jest.spyOn(Product,'findByPk')
+    .mockRejectedValueOnce(new Error("Hubo un error al obtener producto por id"))
+
+    //Guardamos el resultado de la consola
+    const consoleSpy = jest.spyOn(console,'log')
+    await getProductId(Request, Response)
+
+    expect(consoleSpy).toHaveBeenCalledWith(
+      expect.stringContaining("Hubo un error al obtener producto por id")
+    )
+  })
+});
+
+describe('error products',()=>{
+  it('should error update availability ', async () =>{
+    jest.spyOn(Product,'findByPk')
+    .mockRejectedValueOnce(new Error("Hubo un error al editar el campo availability"))
+
+    //Guardamos el resultado de la consola
+    const consoleSpy = jest.spyOn(console,'log')
+    await updateAvailability(Request, Response)
+
+    expect(consoleSpy).toHaveBeenCalledWith(
+      expect.stringContaining("Hubo un error al editar el campo availability")
+    )
+  })
+});
