@@ -76,7 +76,26 @@ const router = Router();
  *                      example: true
  */
 
-//hacer otro esquema de usuarios
+/**
+ * 
+ * @swagger
+ * 
+ * /api/products:
+ *    get:
+ *        summary: Obtener una lista de los productos
+ *        tags:
+ *          - Products
+ *        description: Regresa una lista de productos
+ *        responses: 
+ *          200:
+ *            description: Respuesta exitosa
+ *            content: 
+ *              application/json:
+ *                schema:
+ *                  type: array
+ *                  items: 
+ *                    $ref: '#/components/schemas/Product'
+ */
 router.use(methods);
 
 router.get("/", getProducts);
