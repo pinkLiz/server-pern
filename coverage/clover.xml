@@ -1,54 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1753813126091" clover="3.2.0">
-  <project timestamp="1753813126091" name="All files">
-    <metrics statements="106" coveredstatements="106" conditionals="5" coveredconditionals="5" methods="11" coveredmethods="11" elements="122" coveredelements="122" complexity="0" loc="106" ncloc="106" packages="5" files="8" classes="8"/>
+<coverage generated="1753889667770" clover="3.2.0">
+  <project timestamp="1753889667770" name="All files">
+    <metrics statements="175" coveredstatements="130" conditionals="15" coveredconditionals="5" methods="16" coveredmethods="11" elements="206" coveredelements="146" complexity="0" loc="175" ncloc="175" packages="5" files="11" classes="11"/>
     <package name="src">
-      <metrics statements="35" coveredstatements="35" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
-      <file name="router.ts" path="/Users/Alumno/Documents/liz/server-pern/src/router.ts">
-        <metrics statements="17" coveredstatements="17" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <metrics statements="43" coveredstatements="43" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+      <file name="router.ts" path="/Users/liz/Documents/React/server-pern/src/router.ts">
+        <metrics statements="22" coveredstatements="22" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
         <line num="1" count="2" type="stmt"/>
         <line num="2" count="2" type="stmt"/>
         <line num="11" count="2" type="stmt"/>
-        <line num="12" count="2" type="stmt"/>
-        <line num="13" count="2" type="stmt"/>
-        <line num="14" count="2" type="stmt"/>
-        <line num="16" count="2" type="stmt"/>
-        <line num="18" count="2" type="stmt"/>
+        <line num="19" count="2" type="stmt"/>
         <line num="20" count="2" type="stmt"/>
-        <line num="25" count="2" type="stmt"/>
-        <line num="34" count="2" type="stmt"/>
-        <line num="46" count="11" type="stmt"/>
-        <line num="53" count="2" type="stmt"/>
-        <line num="69" count="4" type="stmt"/>
+        <line num="21" count="2" type="stmt"/>
+        <line num="22" count="2" type="stmt"/>
+        <line num="24" count="2" type="stmt"/>
         <line num="80" count="2" type="stmt"/>
-        <line num="90" count="2" type="stmt"/>
-        <line num="101" count="2" type="stmt"/>
+        <line num="82" count="2" type="stmt"/>
+        <line num="84" count="2" type="stmt"/>
+        <line num="91" count="2" type="stmt"/>
+        <line num="101" count="11" type="stmt"/>
+        <line num="108" count="2" type="stmt"/>
+        <line num="120" count="4" type="stmt"/>
+        <line num="131" count="2" type="stmt"/>
+        <line num="139" count="2" type="stmt"/>
+        <line num="150" count="2" type="stmt"/>
+        <line num="158" count="2" type="stmt"/>
+        <line num="171" count="2" type="stmt"/>
+        <line num="182" count="2" type="stmt"/>
+        <line num="190" count="2" type="stmt"/>
       </file>
-      <file name="server.ts" path="/Users/Alumno/Documents/liz/server-pern/src/server.ts">
-        <metrics statements="18" coveredstatements="18" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="server.ts" path="/Users/liz/Documents/React/server-pern/src/server.ts">
+        <metrics statements="21" coveredstatements="21" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="1" count="2" type="stmt"/>
         <line num="3" count="2" type="stmt"/>
         <line num="4" count="2" type="stmt"/>
         <line num="6" count="2" type="stmt"/>
         <line num="8" count="2" type="stmt"/>
         <line num="10" count="2" type="stmt"/>
-        <line num="11" count="3" type="stmt"/>
-        <line num="12" count="3" type="stmt"/>
-        <line num="13" count="2" type="stmt"/>
+        <line num="11" count="2" type="stmt"/>
         <line num="14" count="2" type="stmt"/>
-        <line num="16" count="1" type="stmt"/>
-        <line num="17" count="1" type="stmt"/>
-        <line num="23" count="2" type="stmt"/>
-        <line num="26" count="2" type="stmt"/>
-        <line num="28" count="2" type="stmt"/>
+        <line num="15" count="3" type="stmt"/>
+        <line num="16" count="3" type="stmt"/>
+        <line num="17" count="2" type="stmt"/>
+        <line num="18" count="2" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="27" count="2" type="stmt"/>
         <line num="30" count="2" type="stmt"/>
         <line num="32" count="2" type="stmt"/>
         <line num="34" count="2" type="stmt"/>
+        <line num="36" count="2" type="stmt"/>
+        <line num="38" count="2" type="stmt"/>
+        <line num="40" count="2" type="stmt"/>
       </file>
     </package>
     <package name="src.config">
-      <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="db.ts" path="/Users/Alumno/Documents/liz/server-pern/src/config/db.ts">
+      <metrics statements="11" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="db.ts" path="/Users/liz/Documents/React/server-pern/src/config/db.ts">
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="2" type="stmt"/>
         <line num="2" count="2" type="stmt"/>
@@ -56,31 +64,40 @@
         <line num="7" count="2" type="stmt"/>
         <line num="13" count="2" type="stmt"/>
       </file>
+      <file name="swagger.ts" path="/Users/liz/Documents/React/server-pern/src/config/swagger.ts">
+        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="28" count="2" type="stmt"/>
+        <line num="30" count="2" type="stmt"/>
+        <line num="44" count="2" type="stmt"/>
+        <line num="46" count="2" type="stmt"/>
+      </file>
     </package>
     <package name="src.handlers">
-      <metrics statements="47" coveredstatements="47" conditionals="4" coveredconditionals="4" methods="6" coveredmethods="6"/>
-      <file name="product.ts" path="/Users/Alumno/Documents/liz/server-pern/src/handlers/product.ts">
-        <metrics statements="47" coveredstatements="47" conditionals="4" coveredconditionals="4" methods="6" coveredmethods="6"/>
+      <metrics statements="93" coveredstatements="48" conditionals="14" coveredconditionals="4" methods="11" coveredmethods="6"/>
+      <file name="product.ts" path="/Users/liz/Documents/React/server-pern/src/handlers/product.ts">
+        <metrics statements="47" coveredstatements="42" conditionals="4" coveredconditionals="4" methods="6" coveredmethods="6"/>
         <line num="3" count="2" type="stmt"/>
         <line num="6" count="2" type="stmt"/>
         <line num="9" count="2" type="stmt"/>
-        <line num="10" count="9" type="stmt"/>
-        <line num="11" count="9" type="stmt"/>
+        <line num="10" count="8" type="stmt"/>
+        <line num="11" count="8" type="stmt"/>
         <line num="12" count="8" type="stmt"/>
-        <line num="14" count="1" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
         <line num="18" count="2" type="stmt"/>
-        <line num="19" count="5" type="stmt"/>
-        <line num="20" count="5" type="stmt"/>
+        <line num="19" count="4" type="stmt"/>
+        <line num="20" count="4" type="stmt"/>
         <line num="23" count="4" type="stmt"/>
-        <line num="25" count="1" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
         <line num="29" count="2" type="stmt"/>
-        <line num="30" count="3" type="stmt"/>
-        <line num="31" count="3" type="stmt"/>
+        <line num="30" count="2" type="stmt"/>
+        <line num="31" count="2" type="stmt"/>
         <line num="32" count="2" type="stmt"/>
         <line num="34" count="2" type="cond" truecount="1" falsecount="0"/>
         <line num="35" count="1" type="stmt"/>
         <line num="38" count="1" type="stmt"/>
-        <line num="40" count="1" type="stmt"/>
+        <line num="40" count="0" type="stmt"/>
         <line num="44" count="2" type="stmt"/>
         <line num="45" count="2" type="stmt"/>
         <line num="47" count="2" type="stmt"/>
@@ -90,34 +107,83 @@
         <line num="54" count="1" type="stmt"/>
         <line num="56" count="1" type="stmt"/>
         <line num="59" count="2" type="stmt"/>
-        <line num="60" count="5" type="stmt"/>
-        <line num="61" count="5" type="stmt"/>
+        <line num="60" count="4" type="stmt"/>
+        <line num="61" count="4" type="stmt"/>
         <line num="62" count="4" type="stmt"/>
         <line num="64" count="4" type="cond" truecount="1" falsecount="0"/>
         <line num="65" count="1" type="stmt"/>
         <line num="68" count="3" type="stmt"/>
         <line num="69" count="3" type="stmt"/>
         <line num="71" count="3" type="stmt"/>
-        <line num="73" count="1" type="stmt"/>
+        <line num="73" count="0" type="stmt"/>
         <line num="77" count="2" type="stmt"/>
-        <line num="78" count="3" type="stmt"/>
-        <line num="79" count="3" type="stmt"/>
+        <line num="78" count="2" type="stmt"/>
+        <line num="79" count="2" type="stmt"/>
         <line num="81" count="2" type="stmt"/>
         <line num="83" count="2" type="cond" truecount="1" falsecount="0"/>
         <line num="84" count="1" type="stmt"/>
         <line num="87" count="1" type="stmt"/>
         <line num="89" count="1" type="stmt"/>
-        <line num="91" count="1" type="stmt"/>
+        <line num="91" count="0" type="stmt"/>
+      </file>
+      <file name="user.ts" path="/Users/liz/Documents/React/server-pern/src/handlers/user.ts">
+        <metrics statements="46" coveredstatements="6" conditionals="10" coveredconditionals="0" methods="5" coveredmethods="0"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="13" count="0" type="cond" truecount="0" falsecount="3"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="26" count="2" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="32" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="36" count="0" type="stmt"/>
+        <line num="40" count="0" type="stmt"/>
+        <line num="42" count="0" type="stmt"/>
+        <line num="46" count="2" type="stmt"/>
+        <line num="47" count="0" type="stmt"/>
+        <line num="48" count="0" type="stmt"/>
+        <line num="49" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="51" count="0" type="stmt"/>
+        <line num="53" count="0" type="stmt"/>
+        <line num="57" count="2" type="stmt"/>
+        <line num="58" count="0" type="stmt"/>
+        <line num="59" count="0" type="stmt"/>
+        <line num="60" count="0" type="stmt"/>
+        <line num="62" count="0" type="stmt"/>
+        <line num="63" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="65" count="0" type="cond" truecount="0" falsecount="3"/>
+        <line num="66" count="0" type="stmt"/>
+        <line num="71" count="0" type="stmt"/>
+        <line num="72" count="0" type="stmt"/>
+        <line num="74" count="0" type="stmt"/>
+        <line num="78" count="2" type="stmt"/>
+        <line num="79" count="0" type="stmt"/>
+        <line num="80" count="0" type="stmt"/>
+        <line num="82" count="0" type="stmt"/>
+        <line num="83" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="85" count="0" type="stmt"/>
+        <line num="86" count="0" type="stmt"/>
+        <line num="88" count="0" type="stmt"/>
+        <line num="90" count="0" type="stmt"/>
       </file>
     </package>
     <package name="src.middleware">
       <metrics statements="13" coveredstatements="13" conditionals="1" coveredconditionals="1" methods="2" coveredmethods="2"/>
-      <file name="delete.ts" path="/Users/Alumno/Documents/liz/server-pern/src/middleware/delete.ts">
+      <file name="delete.ts" path="/Users/liz/Documents/React/server-pern/src/middleware/delete.ts">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="2" count="2" type="stmt"/>
         <line num="4" count="2" type="stmt"/>
       </file>
-      <file name="index.ts" path="/Users/Alumno/Documents/liz/server-pern/src/middleware/index.ts">
+      <file name="index.ts" path="/Users/liz/Documents/React/server-pern/src/middleware/index.ts">
         <metrics statements="7" coveredstatements="7" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
         <line num="1" count="2" type="stmt"/>
         <line num="4" count="2" type="stmt"/>
@@ -127,7 +193,7 @@
         <line num="9" count="7" type="stmt"/>
         <line num="12" count="18" type="stmt"/>
       </file>
-      <file name="methods.ts" path="/Users/Alumno/Documents/liz/server-pern/src/middleware/methods.ts">
+      <file name="methods.ts" path="/Users/liz/Documents/React/server-pern/src/middleware/methods.ts">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="2" count="2" type="stmt"/>
         <line num="4" count="2" type="stmt"/>
@@ -136,8 +202,8 @@
       </file>
     </package>
     <package name="src.models">
-      <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="Product.mo.ts" path="/Users/Alumno/Documents/liz/server-pern/src/models/Product.mo.ts">
+      <metrics statements="15" coveredstatements="15" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="Product.mo.ts" path="/Users/liz/Documents/React/server-pern/src/models/Product.mo.ts">
         <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="3" type="stmt"/>
         <line num="7" count="3" type="stmt"/>
@@ -145,6 +211,18 @@
         <line num="16" count="3" type="stmt"/>
         <line num="22" count="3" type="stmt"/>
         <line num="25" count="3" type="stmt"/>
+      </file>
+      <file name="User.mo.ts" path="/Users/liz/Documents/React/server-pern/src/models/User.mo.ts">
+        <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="7" count="3" type="stmt"/>
+        <line num="13" count="3" type="stmt"/>
+        <line num="21" count="3" type="stmt"/>
+        <line num="30" count="3" type="stmt"/>
+        <line num="36" count="3" type="stmt"/>
+        <line num="42" count="3" type="stmt"/>
+        <line num="48" count="3" type="stmt"/>
+        <line num="54" count="3" type="stmt"/>
       </file>
     </package>
   </project>
