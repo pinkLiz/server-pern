@@ -49,6 +49,95 @@ const router = Router();
 
 /**
  * @swagger
+ * /api/products:
+ *      get:
+ *          summary: Obtener una lista de los productos
+ *          tags:
+ *              - Products
+ *          description: Regresa una lista de productos
+ *          responses: 
+ *              200:
+ *                  description: Respuesta exitosa
+ *                  content: 
+ *                      aplication/json:
+ *                          schema: 
+ *                              type: array
+ *                              items:
+ *                                  $ref: "#/components/schemas/Product"
+ * 
+ */
+
+/**
+ * @swagger
+ * /api/products/{id}:
+ *      get:
+ *          summary: Obtiene un producto por ID.
+ *          tags:
+ *              - Products
+ *          description: Regresa un producto
+ *          
+ *          parameters: 
+ *              - in: path
+ *                name: id
+ *                description: El ID del producto a consultar
+ *                required: true
+ *                schema:
+ *                  type: integer
+ *          responses: 
+ *              200:
+ *                  description: Respuesta exitosa
+ *                  content: 
+ *                      aplication/json:
+ *                          schema: 
+ *                              type: array
+ *                              items:
+ *                                  $ref: "#/components/schemas/Product"
+ *              404:
+ *                  description: No encontrado
+ *              400:
+ *                  description: Solicitud erronea
+ *                  
+ * 
+ */
+
+
+/**
+ * @swagger
+ * /api/products:
+ *  post:
+ *      summary: Crea un nuevo producto
+ *      tags:
+ *          - Products
+ *      description: Retornar un nuevo registro en la base de datos
+ *      requestBody:
+ *        required: true
+ *        content:
+ *          application/json:
+ *            schema:
+ *              type: object
+ *              properties: 
+ *                name: 
+ *                  type: string
+ *                  example: "Monitor curvo 48 pulgadas"
+ * 
+ *                price:
+ *                  type: number
+ *                  example: 1599
+ *      responses: 
+ *          201:
+ *             description: Respuesta exitosa.
+ *             content: 
+ *                  application/json:
+ *                    schema:
+ *                      $ref: '#/components/schemas/Product'
+ *          404:
+ *              description: No encontrado
+ *                      
+ * 
+*/
+
+/**
+ * @swagger
  * components:
  *      schemas:
  *          Users:
