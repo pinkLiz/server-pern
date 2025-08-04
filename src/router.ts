@@ -76,134 +76,92 @@ const router = Router();
  *                      example: true
  */
 
-/**
- * 
- * @swagger
- * 
- * /api/products:
- *    get:
- *        summary: Obtener una lista de los productos
- *        tags:
- *          - Products
- *        description: Regresa una lista de productos
- *        responses: 
- *          200:
- *            description: Respuesta exitosa
- *            content: 
- *              application/json:
- *                schema:
- *                  type: array
- *                  items: 
- *                    $ref: '#/components/schemas/Product'
- */
 router.use(methods);
 
-router.get("/", getProducts);
+//Productos
+router.get("/products", getProducts);
 
 router.get(
-  "/:id",
+  "/products/:id",
   param("id").isNumeric().withMessage("El id debe ser numerico"),
   handleInputErrors,
   getProductId
 );
 
 router.post(
-  "/",
-  body("name").notEmpty().withMessage("El nombre es un campo requerido"),
-
+  "/products",
+  body("name").notEmpty().withMessage("El nombre es requerido"),
   body("price")
-    .notEmpty()
-    .withMessage("El precio es un campo requerido")
-    .isNumeric()
-    .withMessage("El dato no es numerico")
+    .notEmpty().withMessage("El precio es requerido")
+    .isNumeric().withMessage("Debe ser numérico")
     .toFloat()
-    .custom((value) => value > 0)
-    .withMessage("El precio debe ser mayor a 0"),
-
+    .custom((value) => value > 0).withMessage("Debe ser mayor a 0"),
   handleInputErrors,
   createProduct
 );
 
 router.put(
-  "/:id",
+  "/products/:id",
   param("id").isNumeric().withMessage("El id debe ser numerico"),
-
-  body("name").notEmpty().withMessage("El nombre es un campo requerido"),
-
+  body("name").notEmpty().withMessage("El nombre es requerido"),
   body("price")
-    .notEmpty()
-    .withMessage("El precio es un campo requerido")
-    .isNumeric()
-    .withMessage("El dato no es numerico")
+    .notEmpty().withMessage("El precio es requerido")
+    .isNumeric().withMessage("Debe ser numérico")
     .toFloat()
-    .custom((value) => value > 0)
-    .withMessage("El precio debe ser mayor a 0"),
-
-  body("availibility")
-    .isBoolean()
-    .withMessage("La disponibilidad debe ser booleana"),
-
+    .custom((value) => value > 0).withMessage("Debe ser mayor a 0"),
+  body("availibility").isBoolean().withMessage("Debe ser booleano"),
   handleInputErrors,
   updateProduct
 );
 
 router.patch(
-  "/:id",
+  "/products/:id",
   param("id").isNumeric().withMessage("El id debe ser numerico"),
-
   handleInputErrors,
   updateAvailability
 );
 
 router.delete(
-  "/:id",
-  param("id").isNumeric().withMessage("El id debe ser numérico"),
-
+  "/products/:id",
+  param("id").isNumeric().withMessage("El id debe ser numerico"),
   handleInputErrors,
   eliminar,
   deleteProduct
 );
 
 //Usuarios
+router.get("/user", getUsers);
 
 router.get(
   "/user/:id",
-  param("id").isNumeric().withMessage("El id debe ser numerico"),
-  param("id").isInt().withMessage("El id no es valido"),
-  getUserId,
-  handleInputErrors
+  param("id").isInt().withMessage("El id debe ser numerico"),
+  handleInputErrors,
+  getUserId
 );
 
 router.post(
   "/user",
-  body("username").notEmpty().withMessage("El nombre es un campo requerido"),
-
-  body("password")
-    .notEmpty()
-    .withMessage("La constraseña es un campo requerido"),
-  body("email").notEmpty().isEmail().withMessage("El email no es valido"),
-
+  body("username").notEmpty().withMessage("El nombre es requerido"),
+  body("password").notEmpty().withMessage("La contraseña es requerida"),
+  body("email").isEmail().withMessage("El email no es válido"),
   handleInputErrors,
   createUser
 );
 
 router.put(
   "/user/:id",
-  body("username").notEmpty().withMessage("El nombre es un campo requerido"),
-
-  body("email").notEmpty().isEmail().withMessage("El email no es válido"),
-
-  param("id").isNumeric().withMessage("El id debe ser numerico"),
-  updateUser,
-  handleInputErrors
+  param("id").isInt().withMessage("El id debe ser numerico"),
+  body("username").notEmpty().withMessage("El nombre es requerido"),
+  body("email").isEmail().withMessage("El email no es válido"),
+  handleInputErrors,
+  updateUser
 );
 
 router.delete(
   "/user/:id",
-  param("id").isNumeric().withMessage("El id debe ser numerico"),
-  param("id").isInt().withMessage("El id no es valido"),
-  deleteUser,
-  handleInputErrors
+  param("id").isInt().withMessage("El id debe ser numerico"),
+  handleInputErrors,
+  deleteUser
 );
 
 export default router;

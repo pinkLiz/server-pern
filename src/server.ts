@@ -33,7 +33,7 @@ server.use(express.json())
 
 server.use(methods);
 
-server.use('/api/products',router)
+server.use('/api',router)
 
 server.use('/docs', swaggerui.serve, swaggerui.setup(swaggerSpec,swaggerUiOptions))
 
