@@ -137,6 +137,43 @@ const router = Router();
 */
 
 /**
+* @swagger
+* /api/products/{id}:
+*      put:
+*          summary: Actualizar un producto completamente
+*          tags:
+*              - Products
+*          description: Actualiza la información de un producto por su ID
+*          parameters:
+ *              - in: path
+ *                name: id
+ *                description: El ID del producto que se desea actualizar
+ *                required: true
+ *                schema:
+ *                    type: integer
+ *          requestBody:
+ *              required: true
+ *              content:
+ *                  application/json:
+ *                      schema:
+ *                          type: object
+ *                          properties:
+ *                              name:
+ *                                  type: string
+ *                                  example: "Juego de uno"
+ *                              price:
+ *                                  type: number
+ *                                  example: 60
+ *          responses:
+ *              200:
+ *                  description: Producto actualizado
+ *              400:
+ *                  description: Datos invalidos
+ *              404:
+ *                  description: Producto no encontrado
+*/
+
+/**
  * @swagger
  * /api/user:
  *      get:
@@ -237,6 +274,7 @@ const router = Router();
  * 
 */
 
+
 /**
  * @swagger
  * components:
@@ -299,7 +337,6 @@ router.put(
     .isNumeric().withMessage("Debe ser numérico")
     .toFloat()
     .custom((value) => value > 0).withMessage("Debe ser mayor a 0"),
-  body("availibility").isBoolean().withMessage("Debe ser booleano"),
   handleInputErrors,
   updateProduct
 );
