@@ -138,6 +138,107 @@ const router = Router();
 
 /**
  * @swagger
+ * /api/user:
+ *      get:
+ *          summary: Obtener una lista de los usuarios
+ *          tags:
+ *              - Users
+ *          description: Regresa una lista de usuarios
+ *          responses: 
+ *              200:
+ *                  description: Respuesta exitosa
+ *                  content: 
+ *                      aplication/json:
+ *                          schema: 
+ *                              type: array
+ *                              items:
+ *                                  $ref: "#/components/schemas/User"
+ * 
+ */
+
+/**
+ * @swagger
+ * /api/user/{id}:
+ *      get:
+ *          summary: Obtiene un usuario por ID.
+ *          tags:
+ *              - Users
+ *          description: Regresa un usuario
+ *          
+ *          parameters: 
+ *              - in: path
+ *                name: id
+ *                description: El ID del usuario a consultar
+ *                required: true
+ *                schema:
+ *                  type: integer
+ *          responses: 
+ *              200:
+ *                  description: Respuesta exitosa
+ *                  content: 
+ *                      aplication/json:
+ *                          schema: 
+ *                              type: array
+ *                              items:
+ *                                  $ref: "#/components/schemas/User"
+ *              404:
+ *                  description: No encontrado
+ *              400:
+ *                  description: Solicitud erronea
+ *                  
+ * 
+ */
+
+
+/**
+ * @swagger
+ * /api/user:
+ *  post:
+ *      summary: Crea un nuevo producto
+ *      tags:
+ *          - Users
+ *      description: Retornar un nuevo registro en la base de datos
+ *      requestBody:
+ *        required: true
+ *        content:
+ *          application/json:
+ *            schema:
+ *              type: object
+ *              properties: 
+ *                username: 
+ *                  type: string
+ *                  example: "Lizbeth"
+ * 
+ *                email:
+ *                  type: string
+ *                  example: "lizbeth@gmail.com"
+ * 
+ *                password:
+ *                  type: string
+ *                  example: "liz12345"
+ *                 
+ *                rol:
+ *                  type: enum
+ *                  example: "admin"
+ * 
+ *                isActive:
+ *                  type: boolean
+ *                  example: true  
+ *      responses: 
+ *          201:
+ *             description: Respuesta exitosa.
+ *             content: 
+ *                  application/json:
+ *                    schema:
+ *                      $ref: '#/components/schemas/User'
+ *          404:
+ *              description: No encontrado
+ *                      
+ * 
+*/
+
+/**
+ * @swagger
  * components:
  *      schemas:
  *          Users:
