@@ -173,6 +173,70 @@ const router = Router();
  *                  description: Producto no encontrado
 */
 
+
+
+/**
+* @swagger
+* /api/products/{id}:
+*      patch:
+*          summary: Actualizar un producto completamente
+*          tags:
+*              - Products
+*          description: Actualiza la información de un producto por su ID
+*          parameters:
+ *              - in: path
+ *                name: id
+ *                description: El ID del producto que se desea actualizar
+ *                required: true
+ *                schema:
+ *                    type: integer
+ *          responses:
+ *              200:
+ *                  description: Producto actualizado
+ *              400:
+ *                  description: Datos invalidos
+ *              404:
+ *                  description: Producto no encontrado
+*/
+
+/**
+ * @swagger
+ * /api/products/{id}:
+ *      delete:
+ *          summary: Eliminar un producto por ID.
+ *          tags:
+ *              - Products
+ *          description: Regresa un producto
+ *          
+ *          parameters: 
+ *              - in: path
+ *                name: id
+ *                description: El ID del producto a eliminar
+ *                required: true
+ *                schema:
+ *                  type: integer
+ *          responses: 
+ *              200:
+ *                  description: Respuesta exitosa
+ *                  content: 
+ *                      aplication/json:
+ *                          schema: 
+ *                              type: array
+ *                              items:
+ *                                  $ref: "#/components/schemas/Product"
+ *              404:
+ *                  description: No encontrado
+ *              400:
+ *                  description: Solicitud erronea
+ * 
+ */
+
+
+
+
+
+
+
 /**
  * @swagger
  * /api/user:
